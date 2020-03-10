@@ -50,5 +50,11 @@ adequate_view = []
 for i in range(len(array_of_points)):
     adequate_view.append([array_of_points[i][1], array_of_points[i][0]])
 
-for country, points in adequate_view:
-    print(country, ':', points)
+with open('results.csv', 'w') as result_file:
+    num = 0
+    for country, points in adequate_view:
+        if num == 10:
+            break
+        result_file.write(f"{country};{points}\n")
+        print(country, ':', points)
+        num += 1
