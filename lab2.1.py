@@ -57,4 +57,4 @@ with open('results.csv', 'w') as result_file:
             break
         result_file.write(f"{country};{points}\n")
         print(country, ':', points)
-        num += 1
+        num += 1 # comment
